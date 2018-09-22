@@ -31,5 +31,16 @@ namespace MvcModels.Controllers
         {
             return View(model);
         }
+
+        public ViewResult Body()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public Person Body([FromBody]Person model)
+        {
+            return model;
+        }
     }
 }
