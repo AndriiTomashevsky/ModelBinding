@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MvcModels.Models;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace MvcModels.Controllers
 {
@@ -44,9 +44,9 @@ namespace MvcModels.Controllers
             return View(summary);
         }
 
-        public ViewResult Names(string[] names)
+        public ViewResult Names(IList<string> names)
         {
-            return View(names ?? new string[0]);
+            return View(names ?? new List<string>());
         }
     }
 }
