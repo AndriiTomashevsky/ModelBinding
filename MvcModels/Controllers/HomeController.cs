@@ -43,5 +43,10 @@ namespace MvcModels.Controllers
         {
             return View(summary);
         }
+
+        public ViewResult Names(string[] names)
+        {
+            return View(names ?? new string[0]);
+        }
     }
 }
