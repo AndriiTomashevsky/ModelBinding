@@ -26,5 +26,16 @@ namespace MvcModels.Controllers
                 return NotFound();
             }
         }
+
+        public ViewResult Create()
+        {
+            return View(new Person());
+        }
+
+        [HttpPost]
+        public ViewResult Create(Person model)
+        {
+            return View("Index", model);
+        }
     }
 }
