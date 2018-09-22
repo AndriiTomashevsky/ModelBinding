@@ -48,5 +48,10 @@ namespace MvcModels.Controllers
         {
             return View(names ?? new List<string>());
         }
+
+        public ViewResult Address(IList<AddressSummary> addresses)
+        {
+            return View(addresses ?? new List<AddressSummary>());
+        }
     }
 }

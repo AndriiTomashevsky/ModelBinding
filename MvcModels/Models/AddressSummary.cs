@@ -6,7 +6,7 @@ namespace MvcModels.Models
     {
         public string City { get; set; }
 
-        [BindNever]
+        //[BindNever]
         public string Country { get; set; }
     }
 }
