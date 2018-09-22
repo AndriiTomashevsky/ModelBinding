@@ -26,5 +26,10 @@ namespace MvcModels.Controllers
                 return NotFound();
             }
         }
+
+        public string Header([FromHeader]string accept)
+        {
+            return $"Header: {accept}";
+        }
     }
 }
