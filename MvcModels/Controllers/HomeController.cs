@@ -27,9 +27,9 @@ namespace MvcModels.Controllers
             }
         }
 
-        public string Header([FromHeader(Name = "Accept-Language")] string accept)
+        public ViewResult Header(HeaderModel model)
         {
-            return $"Header: {accept}";
+            return View(model);
         }
     }
 }
